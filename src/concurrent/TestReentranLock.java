@@ -55,13 +55,14 @@ class ReentrantLockList{
 
     private int max =10;
 
+    // 锁标记
     Lock lock = new  ReentrantLock();
     /**
      *
      * 生产者
      *
      * **/
-    private Condition production =lock.newCondition();
+    private Condition production =lock.newCondition();// 条件
 
     /**
      *
