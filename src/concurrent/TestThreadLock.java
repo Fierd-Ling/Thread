@@ -52,6 +52,8 @@ public class TestThreadLock {
     // 底层实现还是map，用于存储数据
     static ThreadLocal threadLocal = new ThreadLocal();
 
+    // set 方法等于map.put key是Thread.currentThread();
+
     public static void main(String[] args) throws InterruptedException {
         new Thread(new Runnable() {
             @Override
@@ -65,6 +67,7 @@ public class TestThreadLock {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                // get方法只能获取当前线程对存入的数据
                 System.out.println(threadLocal.get());
             }
         }).start();
