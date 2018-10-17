@@ -168,13 +168,5 @@ public class Test1 {
         a.start();
         b.start();
         c.start();
-
-
-
-
-
-
-
-
     }
 }
